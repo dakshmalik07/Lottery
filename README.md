@@ -1,17 +1,18 @@
-<<<<<<< HEAD
-# Sample Hardhat Project
+Purpose:
+A time-bound lottery where only whitelisted participants can join. Each participant can enter the lottery only once during a specific time window. At the end of the lottery, a random winner is chosen automatically, and the prize pool is distributed.
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
-=======
-# Lottery
->>>>>>> a6d61feb6f050dfebe4e10869c5f8ea04d9e4c75
+Key Features:
+Whitelisted Addresses:
+
+Only addresses added by the owner can participate in the lottery.
+Fair Usage:
+
+Each user can enter the lottery only once, enforced by the hasParticipated mapping.
+Time-Bound Functionality:
+
+The lottery is active only within the specified time window, ensuring time-based participation.
+Automated Outcome:
+
+A random winner is chosen at the end of the lottery using a pseudo-random number generator, and the prize pool is transferred to the winner.
